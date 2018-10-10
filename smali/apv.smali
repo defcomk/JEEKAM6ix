@@ -216,6 +216,8 @@
 
     .line 74
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+	
+	const-string v1, "Pixel 3"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 

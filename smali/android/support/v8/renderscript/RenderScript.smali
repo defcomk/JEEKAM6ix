@@ -1587,6 +1587,8 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+	
+	const-string v1, "Google"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1599,6 +1601,8 @@
     invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+	
+	const-string v1, "Pixel 3"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

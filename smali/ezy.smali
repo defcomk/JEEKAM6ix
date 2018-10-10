@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 .source "PG"
 
-
+#POSSIBLE MAIN DEVICE CHECK SMALI
 # static fields
 .field private static final a:Lezz;
 
@@ -258,6 +258,8 @@
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+	
+	const-string v1, "blueline"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -305,6 +307,8 @@
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+	
+	const-string v1, "Pixel 3"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

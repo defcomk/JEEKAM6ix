@@ -821,10 +821,16 @@
     sget-object v0, Lnmo;->a:Ljava/util/List;
 
     sget-object v4, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+	
+	const-string v4, "Google"
 
     sget-object v5, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+	
+	const-string v5, "blueline"
 
     sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
+	
+	const-string v6, "Pixel 3"
 
     sget-object v7, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 

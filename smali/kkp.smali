@@ -1098,6 +1098,8 @@
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->G:I
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+	
+	const-string v1, "Pixel 3"
 
     invoke-direct {p0, v0, v1}, Lkkp;->a(ILjava/lang/Object;)V
 

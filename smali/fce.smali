@@ -628,6 +628,8 @@
 
     .line 29
     sget-object v3, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+	
+	const-string v1, "Google"
 
     invoke-virtual {v8, v2, v3}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 

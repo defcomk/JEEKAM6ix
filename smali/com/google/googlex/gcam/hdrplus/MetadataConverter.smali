@@ -446,16 +446,22 @@
 
     .line 66
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+	
+	const-string v1, "Google"
 
     invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
 
     .line 67
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+	
+	const-string v0, "Pixel 3"
 
     invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
 
     .line 68
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+	
+	const-string v0, "blueline"
 
     invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
 
