@@ -1,0 +1,52 @@
+.class final Leda;
+.super Ljava/lang/Object;
+.source "PG"
+
+# interfaces
+.implements Ledo;
+
+
+# instance fields
+.field private final synthetic a:Lecy;
+
+
+# direct methods
+.method constructor <init>(Lecy;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Leda;->a:Lecy;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;)Lchy;
+    .locals 4
+
+    .prologue
+    .line 2
+    new-instance v1, Lebp;
+
+    iget-object v2, p0, Leda;->a:Lecy;
+
+    const/4 v3, 0x0
+
+    .line 3
+    iget-object v0, v2, Lecy;->f:Lmed;
+
+    .line 4
+    invoke-virtual {v0}, Lmed;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/Uri;
+
+    invoke-direct {v1, v2, v3, v0}, Lebp;-><init>(Ledp;ZLandroid/net/Uri;)V
+
+    return-object v1
+.end method
