@@ -3,3 +3,6 @@
 /lib/arm64-v8a/libgcam_jni.id2
 /lib/arm64-v8a/libgcam_jni.nam
 /lib/arm64-v8a/libgcam_jni.til
+/build/apk/AndroidManifest.xml
+/build/apk/classes.dex
+/dist/GoogleCamera_6...215420794.apk
