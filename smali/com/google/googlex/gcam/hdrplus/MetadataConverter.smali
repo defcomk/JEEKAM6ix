@@ -447,7 +447,7 @@
     .line 66
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 	
-	const-string v1, "Google"
+	const-string v0, "Google"
 
     invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
 
