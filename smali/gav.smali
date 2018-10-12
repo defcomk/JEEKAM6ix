@@ -32,48 +32,38 @@
 .method constructor <init>(Lkid;Lkih;Lgbc;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "RepeatingFRP"
 
-    .line 2
     invoke-interface {p1, v0}, Lkid;->a(Ljava/lang/String;)Lkic;
 
     move-result-object v0
 
     iput-object v0, p0, Lgav;->e:Lkic;
 
-    .line 3
     iput-object p3, p0, Lgav;->g:Lgbc;
 
-    .line 4
     iput-object p2, p0, Lgav;->j:Lkih;
 
-    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgav;->d:Ljava/lang/Object;
 
-    .line 6
     iput v1, p0, Lgav;->f:I
 
-    const/16 v0, 0x78
+    const/16 v0, 0x1
 
-    .line 7
     iput v0, p0, Lgav;->b:I
 
     const/4 v0, 0x6
 
-    .line 8
     iput v0, p0, Lgav;->i:I
 
-    .line 9
     iput v1, p0, Lgav;->c:I
 
     return-void
@@ -84,22 +74,18 @@
 .method final a()V
     .locals 4
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lgav;->j:Lkih;
 
     const-string v1, "Rrp#sendNextRequest"
 
     invoke-interface {v0, v1}, Lkih;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lgav;->j:Lkih;
 
     const-string v1, "Rrp#lock"
 
     invoke-interface {v0, v1}, Lkih;->a(Ljava/lang/String;)V
 
-    .line 12
     :try_start_0
     iget-object v1, p0, Lgav;->d:Ljava/lang/Object;
 
@@ -107,7 +93,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :try_start_1
     iget v0, p0, Lgav;->f:I
 
@@ -125,22 +110,18 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 14
     iput v0, p0, Lgav;->f:I
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 15
     iput v0, p0, Lgav;->c:I
 
-    .line 16
     iget-object v0, p0, Lgav;->j:Lkih;
 
     const-string v2, "Rrp#build"
 
     invoke-interface {v0, v2}, Lkih;->b(Ljava/lang/String;)V
 
-    .line 17
     new-instance v0, Lgbb;
 
     iget-object v2, p0, Lgav;->h:Lgaz;
@@ -149,25 +130,20 @@
 
     new-instance v2, Lgax;
 
-    .line 18
     invoke-direct {v2, p0}, Lgax;-><init>(Lgav;)V
 
-    .line 19
     invoke-virtual {v0, v2}, Lgbb;->a(Lgbj;)Lgbb;
 
     move-result-object v0
 
-    .line 20
     invoke-virtual {v0}, Lgbb;->c()Lgaz;
 
     move-result-object v0
 
-    .line 21
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 22
     :try_start_2
     iget-object v1, p0, Lgav;->j:Lkih;
 
@@ -175,7 +151,6 @@
 
     invoke-interface {v1, v2}, Lkih;->b(Ljava/lang/String;)V
 
-    .line 23
     iget-object v1, p0, Lgav;->g:Lgbc;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
@@ -188,33 +163,27 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 24
     iget-object v0, p0, Lgav;->j:Lkih;
 
     invoke-interface {v0}, Lkih;->a()V
 
-    .line 25
     iget-object v0, p0, Lgav;->j:Lkih;
 
     invoke-interface {v0}, Lkih;->a()V
 
-    .line 28
     :goto_0
     return-void
 
-    .line 26
     :cond_0
     :try_start_3
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 27
     iget-object v0, p0, Lgav;->j:Lkih;
 
     invoke-interface {v0}, Lkih;->a()V
 
-    .line 28
     iget-object v0, p0, Lgav;->j:Lkih;
 
     invoke-interface {v0}, Lkih;->a()V
@@ -224,12 +193,10 @@
     :catchall_0
     move-exception v0
 
-    .line 29
     iget-object v1, p0, Lgav;->j:Lkih;
 
     invoke-interface {v1}, Lkih;->a()V
 
-    .line 30
     iget-object v1, p0, Lgav;->j:Lkih;
 
     invoke-interface {v1}, Lkih;->a()V
@@ -239,7 +206,6 @@
     :catchall_1
     move-exception v0
 
-    .line 31
     :try_start_4
     monitor-exit v1
     :try_end_4
@@ -254,39 +220,20 @@
 .method public final a(Ljava/util/List;Lgbi;)V
     .locals 5
 
-    .prologue
-    const/4 v0, 0x0
-
-    :goto_0
-    const/16 v1, 0x8
-
-    if-ge v0, v1, :cond_0
-
-    .line 32
-    invoke-virtual {p0}, Lgav;->a()V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 33
-    :cond_0
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_2
 
-    .line 34
     sget-object v0, Lgbi;->a:Lgbi;
 
     invoke-virtual {p2, v0}, Lgbi;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
-    .line 35
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -295,23 +242,21 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 36
     iget-object v2, p0, Lgav;->d:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 37
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    :goto_1
+    :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -319,33 +264,28 @@
 
     check-cast v0, Lgaz;
 
-    .line 38
     iget-object v4, v0, Lgaz;->b:Lmed;
 
     invoke-virtual {v4}, Lmed;->a()Z
 
     move-result v4
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_0
 
-    .line 39
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 56
     :catchall_0
     move-exception v0
 
-    .line 57
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 
-    .line 40
-    :cond_1
+    :cond_0
     :try_start_1
     iget v4, p0, Lgav;->f:I
 
@@ -353,17 +293,14 @@
 
     iput v4, p0, Lgav;->f:I
 
-    .line 41
     new-instance v4, Lgbb;
 
     invoke-direct {v4, v0}, Lgbb;-><init>(Lgaz;)V
 
     new-instance v0, Lgay;
 
-    .line 42
     invoke-direct {v0, p0}, Lgay;-><init>(Lgav;)V
 
-    .line 43
     invoke-virtual {v4, v0}, Lgbb;->a(Lgbj;)Lgbb;
 
     move-result-object v0
@@ -372,40 +309,34 @@
 
     move-result-object v0
 
-    .line 44
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 45
-    :cond_2
+    :cond_1
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 46
     iget-object v0, p0, Lgav;->g:Lgbc;
 
     sget-object v2, Lgbi;->a:Lgbi;
 
     invoke-interface {v0, v1, v2}, Lgbc;->a(Ljava/util/List;Lgbi;)V
 
-    .line 56
-    :cond_3
-    :goto_2
+    :cond_2
+    :goto_1
     return-void
 
-    .line 47
-    :cond_4
+    :cond_3
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    if-le v0, v1, :cond_5
+    if-le v0, v1, :cond_4
 
-    .line 48
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Repeating bursts are not supported"
@@ -414,15 +345,13 @@
 
     throw v0
 
-    .line 49
-    :cond_5
+    :cond_4
     iget-object v1, p0, Lgav;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
     const/4 v0, 0x0
 
-    .line 50
     :try_start_2
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -432,7 +361,6 @@
 
     iput-object v0, p0, Lgav;->h:Lgaz;
 
-    .line 51
     new-instance v0, Lgbb;
 
     iget-object v2, p0, Lgav;->h:Lgaz;
@@ -441,25 +369,20 @@
 
     new-instance v2, Lgaw;
 
-    .line 52
     invoke-direct {v2, p0}, Lgaw;-><init>(Lgav;)V
 
-    .line 53
     invoke-virtual {v0, v2}, Lgbb;->a(Lgbj;)Lgbb;
 
     move-result-object v0
 
-    .line 54
     invoke-virtual {v0}, Lgbb;->c()Lgaz;
 
     move-result-object v0
 
-    .line 55
     monitor-exit v1
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 56
     iget-object v1, p0, Lgav;->g:Lgbc;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
@@ -470,13 +393,11 @@
 
     invoke-interface {v1, v0, v2}, Lgbc;->a(Ljava/util/List;Lgbi;)V
 
-    goto :goto_2
+    goto :goto_1
 
-    .line 57
     :catchall_1
     move-exception v0
 
-    .line 58
     :try_start_3
     monitor-exit v1
     :try_end_3
