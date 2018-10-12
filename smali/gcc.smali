@@ -63,7 +63,7 @@
 .end method
 
 .method public static a(Lget;I)Lgdb;
-    .locals 3
+    .locals 4
 
     .prologue
     const/4 v1, 0x0
