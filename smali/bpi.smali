@@ -53,8 +53,6 @@
 .method public final run()V
     .locals 10
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lbpi;->a:Lbph;
 
     iget-object v2, p0, Lbpi;->b:Lnar;
@@ -71,80 +69,68 @@
 
     iget v7, p0, Lbpi;->h:I
 
-    .line 2
     sget-object v8, Lbph;->a:Ljava/lang/String;
 
     const-string v9, "Execute CameraCaptureSession-creation task on camera handler thread."
 
     invoke-static {v8, v9}, Lbwx;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     new-instance v8, Lbpj;
 
-    .line 4
     invoke-direct {v8, v2}, Lbpj;-><init>(Lnar;)V
 
-    .line 5
     :try_start_0
     invoke-virtual {v0}, Lmed;->a()Z
 
     move-result v9
 
+    const/4 v9, 0x0
+
     if-eqz v9, :cond_2
 
-    .line 6
     :cond_0
     invoke-static {v4, v5, v6, v0}, Lbph;->a(Landroid/view/Surface;Landroid/view/Surface;Lmed;Lmed;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v3}, Lmed;->a()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 8
     iget-object v1, v1, Lbph;->b:Lkvp;
 
     const/4 v3, 0x0
 
     invoke-interface {v1, v0, v8, v3}, Lkvp;->c(Ljava/util/List;Lkvn;Landroid/os/Handler;)V
 
-    .line 25
     :goto_0
     return-void
 
-    .line 9
     :cond_1
     invoke-static {}, Lkwa;->g()Lkwb;
 
     move-result-object v4
 
-    .line 10
     invoke-virtual {v4, v7}, Lkwb;->a(I)Lkwb;
 
     move-result-object v4
 
-    .line 11
     invoke-virtual {v4, v0}, Lkwb;->a(Ljava/util/List;)Lkwb;
 
     move-result-object v0
 
     iget-object v4, v1, Lbph;->c:Ljzy;
 
-    .line 12
     invoke-virtual {v0, v4}, Lkwb;->a(Ljava/util/concurrent/Executor;)Lkwb;
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0, v8}, Lkwb;->a(Lkvn;)Lkwb;
 
     move-result-object v4
 
-    .line 14
     invoke-virtual {v3}, Lmed;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -155,12 +141,10 @@
 
     move-result-object v0
 
-    .line 15
     invoke-virtual {v0}, Lkwb;->a()Lkwa;
 
     move-result-object v0
 
-    .line 16
     iget-object v1, v1, Lbph;->b:Lkvp;
 
     invoke-interface {v1, v0}, Lkvp;->a(Lkwa;)V
@@ -169,50 +153,43 @@
 
     goto :goto_0
 
-    .line 23
     :catch_0
     move-exception v0
 
-    .line 24
     sget-object v1, Lbph;->a:Ljava/lang/String;
 
     const-string v3, "CameraDeviceProxy has been closed. (ResourceUnavailableException)"
 
     invoke-static {v1, v3, v0}, Lbwx;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 25
     invoke-virtual {v2, v0}, Lmyb;->a(Ljava/lang/Throwable;)Z
 
     goto :goto_0
 
-    .line 17
     :cond_2
     :try_start_1
     invoke-virtual {v3}, Lmed;->a()Z
 
     move-result v9
 
+    const/4 v9, 0x0
+
     if-nez v9, :cond_0
 
-    .line 18
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 19
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 20
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     invoke-virtual {v6}, Lmed;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 22
     :goto_1
     iget-object v0, v1, Lbph;->b:Lkvp;
 
@@ -222,7 +199,6 @@
 
     goto :goto_0
 
-    .line 23
     :cond_3
     invoke-virtual {v6}, Lmed;->b()Ljava/lang/Object;
 

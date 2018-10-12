@@ -29,20 +29,18 @@
 .method public final run()V
     .locals 11
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 1
+    if-eqz v3, :cond_b
+
     iget-object v4, p0, Lcku;->a:Lckt;
 
     iget-object v5, p0, Lcku;->b:Lkvw;
 
-    .line 2
     iget v0, v4, Lckt;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v2, 0x24
@@ -63,7 +61,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :cond_0
     :goto_0
     iget-object v0, v4, Lckt;->b:Ljava/util/Set;
@@ -85,12 +82,10 @@
 
     check-cast v0, Lgbj;
 
-    .line 5
     invoke-virtual {v0, v5}, Lgbj;->a_(Lkvw;)V
 
     goto :goto_1
 
-    .line 6
     :pswitch_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_OIS_SAMPLES:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -100,12 +95,10 @@
 
     const-string v1, "Null OIS key (version: 2)"
 
-    .line 7
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 8
     :cond_1
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_OIS_SAMPLES:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -117,7 +110,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 9
     array-length v1, v0
 
     :goto_2
@@ -125,7 +117,6 @@
 
     aget-object v2, v0, v3
 
-    .line 10
     iget-object v6, v4, Lckt;->a:Lcyh;
 
     invoke-virtual {v2}, Landroid/hardware/camera2/params/OisSample;->getTimestamp()J
@@ -151,12 +142,10 @@
 
     const-string v1, "Null pointer for OIS data. OIS API version: 2"
 
-    .line 11
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 12
     :pswitch_1
     sget-object v0, Ljfe;->s:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -167,28 +156,23 @@
 
     const-string v1, "Null OIS keys (version: 1)"
 
-    .line 13
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 14
     :cond_4
     sget-object v0, Ljfe;->t:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_3
 
-    .line 15
     sget-object v0, Ljfe;->w:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 16
     invoke-interface {v5, v0}, Lkvw;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [J
 
-    .line 17
     sget-object v1, Ljfe;->s:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v5, v1}, Lkvw;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -197,7 +181,6 @@
 
     check-cast v1, [F
 
-    .line 18
     sget-object v2, Ljfe;->t:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v5, v2}, Lkvw;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -213,7 +196,6 @@
 
     const-string v1, "Null pointer for OIS data. OIS API version: 1"
 
-    .line 19
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -223,13 +205,11 @@
 
     if-eqz v2, :cond_5
 
-    .line 20
     :goto_3
     array-length v6, v0
 
     if-ge v3, v6, :cond_0
 
-    .line 21
     iget-object v6, v4, Lckt;->a:Lcyh;
 
     aget-wide v8, v0, v3
@@ -244,7 +224,6 @@
 
     goto :goto_3
 
-    .line 22
     :pswitch_2
     sget-object v0, Ljfe;->u:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -255,28 +234,23 @@
 
     const-string v1, "Null OIS keys (version: 0)"
 
-    .line 23
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
 
-    .line 24
     :cond_8
     sget-object v0, Ljfe;->v:Landroid/hardware/camera2/CaptureResult$Key;
 
     if-eqz v0, :cond_7
 
-    .line 25
     sget-object v0, Ljfe;->w:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 26
     invoke-interface {v5, v0}, Lkvw;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [J
 
-    .line 27
     sget-object v1, Ljfe;->u:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v5, v1}, Lkvw;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -285,7 +259,6 @@
 
     check-cast v1, [I
 
-    .line 28
     sget-object v2, Ljfe;->v:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v5, v2}, Lkvw;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -301,7 +274,6 @@
 
     const-string v1, "Null pointer for OIS data. OIS API version: 0"
 
-    .line 29
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_0
@@ -311,13 +283,11 @@
 
     if-eqz v2, :cond_9
 
-    .line 30
     :goto_4
     array-length v6, v0
 
     if-ge v3, v6, :cond_0
 
-    .line 31
     iget-object v6, v4, Lckt;->a:Lcyh;
 
     aget-wide v8, v0, v3
@@ -336,11 +306,9 @@
 
     goto :goto_4
 
-    .line 5
     :cond_b
     return-void
 
-    .line 2
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
