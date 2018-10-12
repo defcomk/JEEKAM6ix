@@ -15,10 +15,8 @@
 .method static constructor <clinit>()V
     .locals 18
 
-    .prologue
     const-class v1, Lnmo;
 
-    .line 47
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -27,12 +25,10 @@
 
     const/4 v1, 0x0
 
-    .line 48
     sput-object v1, Lnmo;->c:Ljava/util/ArrayList;
 
     const/16 v1, 0x1f
 
-    .line 49
     new-array v0, v1, [Lnmp;
 
     move-object/from16 v17, v0
@@ -481,7 +477,6 @@
 
     const v2, 0x43dcdeb8    # 441.74f
 
-    .line 50
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v6
@@ -512,7 +507,6 @@
 
     const v1, 0x4406647b    # 537.57f
 
-    .line 51
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v14
@@ -547,7 +541,6 @@
 
     move-object v7, v6
 
-    .line 52
     invoke-direct/range {v1 .. v8}, Lnmp;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;)V
 
     const/16 v2, 0x18
@@ -570,7 +563,6 @@
 
     const v8, 0x3b96bb99    # 0.0046f
 
-    .line 53
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
@@ -585,14 +577,12 @@
 
     const v2, 0x4402a852    # 522.63f
 
-    .line 54
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v6
 
     const v2, 0x3b79096c    # 0.0038f
 
-    .line 55
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v8
@@ -627,7 +617,6 @@
 
     const/4 v7, 0x0
 
-    .line 56
     invoke-direct/range {v1 .. v8}, Lnmp;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;)V
 
     const/16 v2, 0x1b
@@ -648,7 +637,6 @@
 
     const/4 v7, 0x0
 
-    .line 57
     invoke-direct/range {v1 .. v8}, Lnmp;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;)V
 
     const/16 v2, 0x1c
@@ -669,7 +657,6 @@
 
     const/4 v7, 0x0
 
-    .line 58
     invoke-direct/range {v1 .. v8}, Lnmp;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;)V
 
     const/16 v2, 0x1d
@@ -696,7 +683,6 @@
 
     aput-object v1, v17, v2
 
-    .line 59
     invoke-static/range {v17 .. v17}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -709,8 +695,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -719,18 +703,15 @@
 .method private static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 8
 
-    .prologue
     const/4 v0, 0x0
 
     :try_start_0
     const-string v1, "SHA-1"
 
-    .line 40
     invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v1
 
-    .line 41
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
@@ -739,7 +720,6 @@
 
     move-result-object v1
 
-    .line 42
     new-instance v2, Ljava/lang/StringBuilder;
 
     array-length v3, v1
@@ -751,22 +731,18 @@
     :goto_0
     if-lt v0, v3, :cond_0
 
-    .line 43
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 46
     :goto_1
     return-object p0
 
-    .line 44
     :cond_0
     aget-byte v4, v1, v0
 
     const-string v5, "%02x"
 
-    .line 45
     const/4 v6, 0x1
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -791,7 +767,6 @@
 
     goto :goto_0
 
-    .line 46
     :catch_0
     move-exception v0
 
@@ -807,39 +782,28 @@
 .method public static a(Landroid/content/Context;)Lnnh;
     .locals 11
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    .line 2
     new-instance v1, Lnnh;
 
     invoke-direct {v1}, Lnnh;-><init>()V
 
-    .line 3
     sget-object v0, Lnmo;->a:Ljava/util/List;
 
     sget-object v4, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-	
-	const-string v4, "Google"
 
     sget-object v5, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-	
-	const-string v5, "blueline"
 
     sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
-	
-	const-string v6, "Pixel 3"
 
     sget-object v7, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
-    .line 4
     invoke-static {v5}, Lnmo;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 5
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -857,21 +821,18 @@
 
     check-cast v0, Lnmp;
 
-    .line 6
     invoke-virtual {v0, v4, v5, v6, v7}, Lnmp;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v10
 
     if-nez v10, :cond_1
 
-    .line 7
     invoke-virtual {v0, v4, v8, v6, v7}, Lnmp;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v10
 
     if-eqz v10, :cond_0
 
-    .line 8
     :cond_1
     sget-object v4, Lnmo;->b:Ljava/lang/String;
 
@@ -921,64 +882,53 @@
 
     const-string v6, "Found override: {MANUFACTURER=%s, DEVICE=%s, MODEL=%s, HARDWARE=%s} : x_ppi=%f, y_ppi=%f, bottom_bezel_height=%f)"
 
-    .line 9
     invoke-static {v6, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 10
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     iget-object v4, v0, Lnmp;->f:Ljava/lang/Float;
 
     if-eqz v4, :cond_2
 
-    .line 12
     invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
 
     move-result v4
 
     invoke-virtual {v1, v4}, Lnnh;->a(F)Lnnh;
 
-    .line 13
     :cond_2
     iget-object v4, v0, Lnmp;->g:Ljava/lang/Float;
 
     if-eqz v4, :cond_3
 
-    .line 14
     invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
 
     move-result v4
 
     invoke-virtual {v1, v4}, Lnnh;->b(F)Lnnh;
 
-    .line 15
     :cond_3
     iget-object v0, v0, Lnmp;->a:Ljava/lang/Float;
 
     if-eqz v0, :cond_4
 
-    .line 16
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    .line 17
     iget v4, v1, Lnnh;->a:I
 
     or-int/lit8 v4, v4, 0x4
 
     iput v4, v1, Lnnh;->a:I
 
-    .line 18
     iput v0, v1, Lnnh;->b:F
 
     :cond_4
     const-string v0, "samsung"
 
-    .line 19
     sget-object v4, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -987,27 +937,22 @@
 
     if-eqz v0, :cond_6
 
-    .line 20
     invoke-static {p0}, Lndv;->a(Landroid/content/Context;)Landroid/view/Display;
 
     move-result-object v4
 
-    .line 21
     invoke-static {v4}, Lndv;->a(Landroid/view/Display;)Landroid/util/DisplayMetrics;
 
     move-result-object v5
 
-    .line 22
     iget v0, v5, Landroid/util/DisplayMetrics;->widthPixels:I
 
     if-eqz v4, :cond_9
 
-    .line 23
     sget-object v2, Lnmo;->c:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_7
 
-    .line 24
     sget-object v2, Lnmo;->c:Ljava/util/ArrayList;
 
     move-object v4, v2
@@ -1015,7 +960,6 @@
     :goto_0
     if-eqz v4, :cond_6
 
-    .line 25
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -1029,10 +973,8 @@
 
     move-result-object v0
 
-    .line 26
     check-cast v0, Landroid/util/Size;
 
-    .line 27
     invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
 
     move-result v7
@@ -1057,13 +999,11 @@
 
     goto :goto_1
 
-    .line 28
     :cond_5
     iget v0, v5, Landroid/util/DisplayMetrics;->widthPixels:I
 
     if-eq v0, v2, :cond_6
 
-    .line 29
     iget v0, v5, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v0, v0
@@ -1072,7 +1012,6 @@
 
     div-float/2addr v0, v2
 
-    .line 30
     sget-object v2, Lnmo;->b:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1093,30 +1032,24 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     iget v2, v1, Lnnh;->c:F
 
     mul-float/2addr v2, v0
 
-    .line 32
     invoke-virtual {v1, v2}, Lnnh;->a(F)Lnnh;
 
-    .line 33
     iget v2, v1, Lnnh;->d:F
 
     mul-float/2addr v0, v2
 
-    .line 34
     invoke-virtual {v1, v0}, Lnnh;->b(F)Lnnh;
 
     :cond_6
     move-object v0, v1
 
-    .line 39
     :goto_2
     return-object v0
 
-    .line 35
     :cond_7
     new-instance v2, Ljava/util/ArrayList;
 
@@ -1124,14 +1057,12 @@
 
     sput-object v2, Lnmo;->c:Ljava/util/ArrayList;
 
-    .line 36
     invoke-virtual {v4}, Landroid/view/Display;->getSupportedModes()[Landroid/view/Display$Mode;
 
     move-result-object v4
 
     if-eqz v4, :cond_8
 
-    .line 37
     array-length v6, v4
 
     move v2, v3
@@ -1141,7 +1072,6 @@
 
     aget-object v7, v4, v2
 
-    .line 38
     sget-object v8, Lnmo;->c:Ljava/util/ArrayList;
 
     new-instance v9, Landroid/util/Size;
@@ -1162,7 +1092,6 @@
 
     goto :goto_3
 
-    .line 39
     :cond_8
     sget-object v2, Lnmo;->c:Ljava/util/ArrayList;
 

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 .source "PG"
 
-#POSSIBLE MAIN DEVICE CHECK SMALI
+
 # static fields
 .field private static final a:Lezz;
 
@@ -15,7 +15,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/high16 v5, -0x40800000    # -1.0f
@@ -26,21 +25,18 @@
 
     const-string v0, "DeviceManager"
 
-    .line 9
     invoke-static {v0}, Lbwx;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lezy;->c:Ljava/lang/String;
 
-    .line 10
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lezy;->b:Ljava/util/Map;
 
-    .line 11
     new-instance v0, Lezz;
 
     invoke-direct {v0, v5, v6}, Lezz;-><init>(FZ)V
@@ -51,7 +47,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 12
     new-instance v0, Lezz;
 
     invoke-direct {v0, v5, v6}, Lezz;-><init>(FZ)V
@@ -62,7 +57,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 13
     new-instance v0, Lezz;
 
     invoke-direct {v0, v5, v6}, Lezz;-><init>(FZ)V
@@ -73,7 +67,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 14
     new-instance v0, Lezz;
 
     invoke-direct {v0, v5, v6}, Lezz;-><init>(FZ)V
@@ -84,7 +77,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 15
     new-instance v0, Lezz;
 
     invoke-direct {v0, v4, v3}, Lezz;-><init>(FZ)V
@@ -95,7 +87,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 16
     new-instance v0, Lezz;
 
     invoke-direct {v0, v4, v3}, Lezz;-><init>(FZ)V
@@ -106,7 +97,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 17
     new-instance v0, Lezz;
 
     invoke-direct {v0, v4, v3}, Lezz;-><init>(FZ)V
@@ -117,7 +107,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 18
     new-instance v0, Lezz;
 
     invoke-direct {v0, v4, v3}, Lezz;-><init>(FZ)V
@@ -128,7 +117,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 19
     new-instance v0, Lezz;
 
     invoke-direct {v0, v4, v3}, Lezz;-><init>(FZ)V
@@ -139,7 +127,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 20
     new-instance v0, Lezz;
 
     invoke-direct {v0, v4, v3}, Lezz;-><init>(FZ)V
@@ -150,7 +137,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 21
     new-instance v0, Lezz;
 
     const/high16 v1, 0x42540000    # 53.0f
@@ -163,7 +149,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 22
     new-instance v0, Lezz;
 
     invoke-direct {v0, v5, v3}, Lezz;-><init>(FZ)V
@@ -174,7 +159,6 @@
 
     invoke-static {v1, v2, v0}, Lezy;->a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
 
-    .line 23
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -205,7 +189,6 @@
 
     move-result-object v0
 
-    .line 24
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -252,14 +235,11 @@
 
     move-result-object v0
 
-    .line 25
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-	
-	const-string v1, "blueline"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -301,14 +281,11 @@
 
     move-result-object v0
 
-    .line 26
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
-	
-	const-string v1, "Pixel 3"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -350,7 +327,6 @@
 
     move-result-object v0
 
-    .line 27
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -397,7 +373,6 @@
 
     move-result-object v0
 
-    .line 28
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -444,7 +419,6 @@
 
     move-result-object v0
 
-    .line 29
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -491,7 +465,6 @@
 
     move-result-object v0
 
-    .line 30
     sget-object v1, Lezy;->c:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -513,7 +486,6 @@
     :goto_0
     invoke-static {v1, v0}, Lbwx;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 31
     sget-object v0, Lezy;->b:Ljava/util/Map;
 
     invoke-static {}, Lezy;->c()Ljava/lang/String;
@@ -522,12 +494,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 32
     invoke-static {}, Lezy;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 33
     sget-object v1, Lezy;->b:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -538,7 +508,6 @@
 
     if-nez v0, :cond_0
 
-    .line 34
     sget-object v0, Lezy;->b:Ljava/util/Map;
 
     const-string v1, "Default"
@@ -549,13 +518,11 @@
 
     check-cast v0, Lezz;
 
-    .line 35
     :cond_0
     sput-object v0, Lezy;->a:Lezz;
 
     return-void
 
-    .line 36
     :cond_1
     invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
@@ -567,8 +534,6 @@
 .method public static a(F)F
     .locals 3
 
-    .prologue
-    .line 1
     sget-object v0, Lezy;->a:Lezz;
 
     iget v0, v0, Lezz;->a:F
@@ -585,7 +550,6 @@
 
     if-lez v0, :cond_0
 
-    .line 2
     sget-object v0, Lezy;->c:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -608,7 +572,6 @@
 
     const/high16 p0, 0x425c0000    # 55.0f
 
-    .line 3
     :cond_0
     :goto_0
     return p0
@@ -624,8 +587,6 @@
 .method private static a(Ljava/lang/String;Ljava/lang/String;Lezz;)V
     .locals 4
 
-    .prologue
-    .line 7
     sget-object v1, Lezy;->b:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -662,8 +623,6 @@
 .method public static a()Z
     .locals 2
 
-    .prologue
-    .line 5
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "GalaxySZ"
@@ -678,8 +637,6 @@
 .method public static a(D)Z
     .locals 4
 
-    .prologue
-    .line 4
     invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v0
@@ -704,8 +661,6 @@
 .method public static b()Z
     .locals 2
 
-    .prologue
-    .line 6
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "Nexus 5"
@@ -720,8 +675,6 @@
 .method private static c()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 8
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
