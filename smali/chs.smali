@@ -17,12 +17,10 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    const/16 v0, 0x400
+    const/16 v0, 0x500
 
-    const/16 v1, 0x300
+    const/16 v1, 0x3c0
 
-    .line 1
     invoke-static {v0, v1}, Lkhq;->a(II)Lkhq;
 
     move-result-object v0
@@ -33,7 +31,6 @@
 
     const/16 v1, 0x2d0
 
-    .line 2
     invoke-static {v0, v1}, Lkhq;->a(II)Lkhq;
 
     move-result-object v0
@@ -44,7 +41,6 @@
 
     const/16 v1, 0x600
 
-    .line 3
     invoke-static {v0, v1}, Lkhq;->a(II)Lkhq;
 
     move-result-object v0
@@ -55,7 +51,6 @@
 
     const/16 v1, 0x438
 
-    .line 4
     invoke-static {v0, v1}, Lkhq;->a(II)Lkhq;
 
     move-result-object v0
