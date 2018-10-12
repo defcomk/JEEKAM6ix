@@ -2,7 +2,6 @@
 .super Ljava/lang/Object;
 .source "PG"
 
-#ACTUALLY MAYBE THIS
 
 # instance fields
 .field public final a:Z
@@ -34,12 +33,10 @@
 .method private constructor <init>(J)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide v4, -0x2147b4292375dfd7L    # -1.941677432629765E148
@@ -50,7 +47,6 @@
 
     move v0, v1
 
-    .line 15
     :goto_0
     iput-boolean v0, p0, Lkvd;->a:Z
 
@@ -62,7 +58,6 @@
 
     move v0, v1
 
-    .line 16
     :goto_1
     iput-boolean v0, p0, Lkvd;->b:Z
 
@@ -74,7 +69,6 @@
 
     move v0, v1
 
-    .line 17
     :goto_2
     iput-boolean v0, p0, Lkvd;->f:Z
 
@@ -86,7 +80,6 @@
 
     move v0, v1
 
-    .line 18
     :goto_3
     iput-boolean v0, p0, Lkvd;->c:Z
 
@@ -98,7 +91,6 @@
 
     move v0, v1
 
-    .line 19
     :goto_4
     iput-boolean v0, p0, Lkvd;->l:Z
 
@@ -110,7 +102,6 @@
 
     move v0, v1
 
-    .line 20
     :goto_5
     iput-boolean v0, p0, Lkvd;->h:Z
 
@@ -122,7 +113,6 @@
 
     move v0, v1
 
-    .line 21
     :goto_6
     iput-boolean v0, p0, Lkvd;->k:Z
 
@@ -134,7 +124,6 @@
 
     move v0, v1
 
-    .line 22
     :goto_7
     iput-boolean v0, p0, Lkvd;->j:Z
 
@@ -146,7 +135,6 @@
 
     move v0, v1
 
-    .line 23
     :goto_8
     iput-boolean v0, p0, Lkvd;->g:Z
 
@@ -158,7 +146,6 @@
 
     move v0, v1
 
-    .line 24
     :goto_9
     iput-boolean v0, p0, Lkvd;->d:Z
 
@@ -170,7 +157,6 @@
 
     move v0, v1
 
-    .line 25
     :goto_a
     iput-boolean v0, p0, Lkvd;->e:Z
 
@@ -180,7 +166,6 @@
 
     if-nez v0, :cond_0
 
-    .line 26
     :goto_b
     iput-boolean v1, p0, Lkvd;->i:Z
 
@@ -250,10 +235,8 @@
 .method private static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
     if-eqz p0, :cond_0
 
-    .line 31
     sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -272,36 +255,30 @@
 .method public static a()Lkvd;
     .locals 6
 
-    .prologue
-    .line 1
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-	
-	const-string v0, "Google"
+
+    const-string v0, "Google"
 
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-	
-	const-string v1, "blueline"
+
+    const-string v1, "taimen"
 
     sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-    .line 2
     invoke-static {v0}, Lkvd;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 3
     invoke-static {v1}, Lkvd;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     invoke-static {v2}, Lkvd;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "GENERIC"
 
-    .line 5
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -310,7 +287,6 @@
 
     const-string v2, "GENERIC"
 
-    .line 6
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -319,7 +295,6 @@
 
     const-string v2, "SDK_"
 
-    .line 7
     invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -328,14 +303,12 @@
 
     const-string v2, "_SDK"
 
-    .line 8
     invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 9
     :cond_0
     new-instance v0, Lkvd;
 
@@ -343,15 +316,12 @@
 
     invoke-direct {v0, v2, v3}, Lkvd;-><init>(J)V
 
-    .line 13
     :goto_0
     return-object v0
 
-    .line 10
     :cond_1
     new-instance v0, Lkvd;
 
-    .line 11
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -392,7 +362,6 @@
 
     move-result-object v1
 
-    .line 12
     invoke-static {}, Lmra;->b()Lmqy;
 
     move-result-object v2
@@ -411,7 +380,6 @@
 
     move-result-wide v2
 
-    .line 13
     invoke-direct {v0, v2, v3}, Lkvd;-><init>(J)V
 
     goto :goto_0
@@ -422,23 +390,18 @@
 .method public final b()Z
     .locals 1
 
-    .prologue
-    .line 27
     iget-boolean v0, p0, Lkvd;->d:Z
 
     if-nez v0, :cond_0
 
-    .line 28
     iget-boolean v0, p0, Lkvd;->g:Z
 
     if-nez v0, :cond_0
 
-    .line 29
     iget-boolean v0, p0, Lkvd;->e:Z
 
     if-nez v0, :cond_0
 
-    .line 30
     iget-boolean v0, p0, Lkvd;->i:Z
 
     if-eqz v0, :cond_1

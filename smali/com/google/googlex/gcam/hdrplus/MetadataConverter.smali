@@ -399,13 +399,11 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v0, "Pixel 3"
-
     invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
 
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    const-string v0, "blueline"
+    const-string v0, "walleye"
 
     invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
 
@@ -3471,6 +3469,8 @@
     invoke-virtual {v4, v2}, Lcom/google/googlex/gcam/FrameMetadata;->setFlash(I)V
 
     goto/16 :goto_0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
